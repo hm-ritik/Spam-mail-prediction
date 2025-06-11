@@ -15,16 +15,16 @@ print(mail.info())
 print(mail.describe())
 
 le=LabelEncoder()
-mail['siya']=le.fit_transform(mail['Category'])
+mail['cya']=le.fit_transform(mail['Category'])
 maild=mail.drop(columns='Category' , axis=1)
 print(maild.head())
 
 X=mail['Message']
-Y=mail['siya']
+Y=mail['cya']
 
 print(X.head())
 print(Y.head())
-ritik=maild['siya'].value_counts()
+ritik=maild['cya'].value_counts()
 print(ritik)
 # 0=4825 , 1=747
 #applying somote to manage imbalanced data
@@ -54,8 +54,8 @@ print("The accuracy score of test data" , accuracy_score(testpredict , Y_test))
 
 
 
-#siya=mail.isnull().sum()
-#print(siya)
+#cya=mail.isnull().sum()
+#print(cya)
 
 
 
